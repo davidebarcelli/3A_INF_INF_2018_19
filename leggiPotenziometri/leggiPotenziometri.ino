@@ -4,7 +4,7 @@ void setup()
 }
 
 bool leggi=false;
-byte a='0',b='0',c='0';
+byte a='a',b='a',c='a';
 void loop() 
 {
   if(Serial.available()>0)
@@ -16,7 +16,7 @@ void loop()
   Serial.write(a);
   Serial.write(b);
   Serial.write(c);
-  a = ((a-'0')+1)%10+'0';
+  a = ((a-'a')+1)%26+'a';
   leggi=false;
   delay(100);
 }

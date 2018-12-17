@@ -2,9 +2,7 @@
 TARGET=serialLib
 CC=gcc
 #INCLUDE=-I/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/JavaVM.framework/Versions/A/Headers/
-INCLUDE=-I/usr/lib/jvm/java-11-oracle/include/ -I/usr/lib/jvm/java-11-oracle/include/linux/ -I.
-
-
+INCLUDE=-I/usr/lib/jvm/java-8-oracle/include/ -I/usr/lib/jvm/java-8-oracle/include/linux/ -I.
 
 ${TARGET}: ${TARGET}Test.java ${TARGET}.c
 	javac ${TARGET}Test.java -h .

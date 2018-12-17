@@ -1,0 +1,21 @@
+#BlueJ class context
+comment0.target=Pannello
+comment1.params=port
+comment1.target=int\ apriSeriale(java.lang.String)
+comment2.params=
+comment2.target=void\ leggiDaSeriale()
+comment3.params=pos
+comment3.target=int\ prendiValoreLetto(int)
+comment4.params=
+comment4.target=void\ chiudiSeriale()
+comment5.params=
+comment5.target=Pannello()
+comment6.params=args
+comment6.target=void\ main(java.lang.String[])
+comment7.params=x
+comment7.target=double\ parabola(double)
+comment8.params=g
+comment8.target=void\ disegnaParabola(java.awt.Graphics)
+comment9.params=g
+comment9.target=void\ paintComponent(java.awt.Graphics)
+numComments=10

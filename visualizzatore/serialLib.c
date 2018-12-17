@@ -66,7 +66,7 @@ void set_blocking (int fd, int should_block)
 int fd;
 char buf [3];
 
-JNIEXPORT jint JNICALL Java_serialLibTest_apriSeriale (JNIEnv *env, jclass obj, jstring myString)
+JNIEXPORT jint JNICALL Java_Pannello_apriSeriale (JNIEnv *env, jclass obj, jstring myString)
 {
 	const char* portname = (*env)->GetStringUTFChars(env,myString,NULL);
 	//char *portname = "/dev/ttyUSB0";
@@ -89,7 +89,7 @@ JNIEXPORT jint JNICALL Java_serialLibTest_apriSeriale (JNIEnv *env, jclass obj, 
 	set_blocking (fd, 1);
 }
 
-JNIEXPORT void JNICALL Java_serialLibTest_leggiDaSeriale (JNIEnv *env, jclass obj)
+JNIEXPORT void JNICALL Java_Pannello_leggiDaSeriale (JNIEnv *env, jclass obj)
 {
 	if(fd<0)
 		return;
@@ -97,7 +97,7 @@ JNIEXPORT void JNICALL Java_serialLibTest_leggiDaSeriale (JNIEnv *env, jclass ob
 	int n = read (fd, buf, 3);
 }
 
-JNIEXPORT jint JNICALL Java_serialLibTest_prendiValoreLetto
+JNIEXPORT jint JNICALL Java_Pannello_prendiValoreLetto
   (JNIEnv *env, jclass obj, jint i)
 {
 	if(i<0 || i>2)
@@ -106,7 +106,7 @@ JNIEXPORT jint JNICALL Java_serialLibTest_prendiValoreLetto
 }
 
 
-JNIEXPORT void JNICALL Java_serialLibTest_chiudiSeriale (JNIEnv *env, jclass obj)
+JNIEXPORT void JNICALL Java_Pannello_chiudiSeriale (JNIEnv *env, jclass obj)
 {
 	close(fd);
 	fd=-1;
